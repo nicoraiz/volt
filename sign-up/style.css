@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+/* Definición del header */
+.header {
+  background-color: rgb(72, 121, 255);
+  display: flex;
+  justify-content: flex-start; /* Mantener logo a la izquierda */
+  align-items: center;
+  height: 100px; /* Altura fija */
+  padding: 0 40px;
+  box-shadow: 0px 9px 18px -4px rgba(0, 0, 0, 0.45);
+  overflow: hidden; /* Evita que contenido se desborde */
+}
+
+/* Logo */
+.header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrado del logo dentro del contenedor */
+  flex: 0 0 auto; /* No permite que crezca ni se encoja */
+  height: 100%; /* El logo tiene la misma altura que el header */
+  pointer-events: none; /* El contenedor del logo no debe interactuar con el puntero */
+}
+
+/* Imagen del logo: hacerla más grande sin que se desborde */
+.header .logo .img-logo {
+  max-height: 150px;  /* Tamaño máximo para la imagen (ajustar según se necesite) */
+  width: auto;
+  display: block;
+  cursor: pointer; /* Se activa el puntero solo para la imagen */
+  pointer-events: auto; /* Solo la imagen debe responder al cursor */
+}

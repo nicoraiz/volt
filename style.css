@@ -81,3 +81,87 @@ body {
     border-radius: 10px;
     padding: 9px 25px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+}
+
+body {
+    background-color: white;
+}
+
+/* Definición del header */
+.header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px; /* Altura fija */
+    padding: 0 40px;
+    box-shadow: 0px 9px 18px -4px rgba(0, 0, 0, 0.45);
+}
+
+/* Logo: se restringe que no crezca más de lo deseado */
+.header .logo {
+    flex: 0 0 auto; /* No permite que crezca ni se encoja */
+    display: flex;
+    align-items: center;
+}
+
+/* Imagen del logo: más grande, sin desbordar */
+.header .logo .img-logo {
+    max-height: 150px;  /* Ajuste el tamaño del logo según lo necesites */
+    width: auto;
+    display: block;
+    cursor: pointer; /* Puntero solo en la imagen */
+    pointer-events: auto; /* Solo la imagen debe responder al cursor */
+}
+
+/* Contenedor para los elementos a la derecha */
+.header .right-container {
+    flex: 1;  /* Ocupa el espacio restante */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+/* Estilos para los botones y el enlace */
+.header .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.header .nav-links li {
+    display: inline-block;
+}
+
+.header .nav-links a {  
+    color: black;
+    text-decoration: none;
+}
+
+.header .btn-s button {
+    cursor: pointer;
+    background-color: #bedbff;
+    color: #0173ff;
+    border: none;
+    border-radius: 10px;
+    padding: 9px 25px;
+}
+
+.header .btn-c button {
+    cursor: pointer;
+    background-color: #0073ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 9px 25px;
+}
